@@ -1,0 +1,22 @@
+<h2><%= gp.name %></h2>
+
+<div class="wrapper">
+	<%= for p <- people do %>
+        <div class="groups" id="<%= p.id %>">
+            Name: <%= p.name %>
+            <br/>
+            Note: <%= p.note %>
+            <br/>
+            <%= p.pic %>
+        </div>
+    <% end %>
+    <div class="create people">
+		<div id="add">+</div>
+		<form id="create" action="/create/p" method="post" autocomplete="off">
+			<input type="text" placeholder="Name" name="name"/>
+            <input type= "text" placeholder="Note" name="note"/>
+            <input type="file" name="pic" accept="image/*"/>
+			<button type="submit">Add</button>
+		</form>
+    </div>
+</div>

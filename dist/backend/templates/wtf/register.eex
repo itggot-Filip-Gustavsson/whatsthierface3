@@ -1,0 +1,6 @@
+<form action="/create/u" method="post">
+    <input type="text" placeholder="Full name" name="name"/>
+	<input type="email" placeholder="Email" name="email"/>
+	<input type= "password" placeholder="Password" name="pwd"/> 
+	<button type="submit">Register</button>
+</form>

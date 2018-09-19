@@ -1,0 +1,14 @@
+<div class="ws-handler">
+    <form id="create" action="/create/w" method="post">
+        <input type="text" placeholder="Workspace name" name="name"/>
+        <input type="text" placeholder="Company name" name="company"/>
+        <input type= "password" placeholder="Code" name="code"/> 
+        <button type="submit">Make a new Workspace</button>
+    </form>
+
+    <form id="join" action="/join/w" method="post">
+        <input type="text" placeholder="Workspace name" name="name"/>
+        <input type= "password" placeholder="Code" name="code"/> 
+        <button type="submit">Join a new Workspace</button>
+    </form>
+</div>

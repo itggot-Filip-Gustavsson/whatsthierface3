@@ -1,0 +1,19 @@
+<h2>Welcome to <%= ws.company %>!</h2>
+
+<div class="wrapper">
+	<%= for gp <- gps do %>
+        <div class="groups" id="<%= gp.id %>">
+            Workspace: <%= ws.name %>
+            <br />
+            Group: <%= gp.name %>
+        </div>
+    <% end %>
+    <div class="create groups">
+		<div id="add">+</div>
+		<form id="create" action="/create/g" method="post" autocomplete="off">
+			<input type="number" value="<%= ws.id %>" name="ws_id" style="display: none" readonly />
+			<input type= "text" placeholder="Group name" name="name"/> 
+			<button type="submit">Make a new group</button>
+		</form>
+    </div>
+</div>

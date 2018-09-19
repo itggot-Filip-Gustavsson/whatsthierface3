@@ -1,0 +1,14 @@
+<%= if user do %>
+	<form action="/logout" method="post">
+		<button type="submit">Log Out</button>
+	</form>
+<% else %>
+	<form action="/login" method="post">
+		<input type="text" name="email" placeholder="Email"/>
+		<input type="password" name="pwd" placeholder="Password"/>
+		<button type="submit">Log In</button>
+	</form>
+	<form action="/create/u" method="get">
+		<button type="submit">Register</button>
+	</form>
+<% end %>
